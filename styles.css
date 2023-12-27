@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), red);
+}
+
+.background{
+    background-image: url(controller.png);
+    background-position: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+ .logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.harmburger{
+    cursor: pointer;
+    z-index: 100;
+}
+
+.content{
+    width: 0;
+    height: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    border-bottom-left-radius: 100%;
+    transition: width 0.5s, height 0.5s, border-radius 0.5s;
+}
+
+.content.open-menu{
+    width: 100%;
+    height: 100vh;
+    border-bottom-left-radius: 0;
+}
+
+.content ul li {
+    list-style: none;
+    margin: 20px;
+    text-align: center;
+}
+
+.content ul li a{
+    text-decoration: none;
+    text-transform: lowercase;
+    display: inline-block;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    text-shadow: 0 0 0 rgb(0, 255, 38);
+    transition: text-shadow 0.5s, transform 0.5s;
+}
+
+.content ul li a:hover{
+    text-shadow: -3px 3px 0 rgb(0, 255, 38);
+    transform: translateY(-6px);
+}
+
